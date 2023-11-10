@@ -30,7 +30,7 @@ const data = [
     {
         name: "Genshin Impact",
         genres: ["Open-World", "RPG", "Gacha"],
-        multiplayer: true,
+        multiplayer: false,
         price: "Free",
         dlc: false,
     },
@@ -43,16 +43,18 @@ const data = [
     },
     {
         name: "Raft",
-        genres: ["Open-World", "RPG", "Anime"],
-        multiplayer: false,
+        genres: ["Open-World", "Adventure"],
+        multiplayer: true,
         price: "$59.99",
         dlc: true,
     },
     {
         name: "Sea of Thieves",
-        genres: ["Open-World", "RPG", "Anime"],
-        multiplayer: false,
+        genres: ["Open-World", "Adventure", "Action"],
+        multiplayer: true,
         price: "$59.99",
         dlc: true,
     },
 ];
+
+export { data };
