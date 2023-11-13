@@ -21,3 +21,6 @@ function insert(thing, DOMSelectors) {
 
 insert(thing, DOMSelectors);
 
+make.forEach((thing)=>{
+    insert(thing, DOMSelectors);
+});
