@@ -1,16 +1,22 @@
 import './style.css';
 import { data } from "./games";
-import { DOMSelectors } from './dom';
 
+const DOMSelectors = {
+    form: document.querySelector(".form"),
+    container: document.querySelector(".container"),
+    gameName: document.getElementById("name"),
+    gamePrice: document.getElementById("price"),
+};
 
+//function create() {
+    //const thing = {
+        //names: DOMSelectors.gameName.value,
+        //pictures: DOMSelectors.picture.value,
+        //price: DOMSelectors.gamePrice.value,
+    //};
+//}
 
-const thing = {
-    names: data.name.value,
-    pictures: data.picture.value,
-    price: data.price.value,
-}
-
-function insert(thing, DOMSelectors) {
+/*function insert(thing, DOMSelectors) {
     DOMSelectors.container.insertAdjacentHTML("afterbegin", 
     ` <div class="card">
         <h2 class="card-title">${thing.names}</h2>
@@ -18,9 +24,17 @@ function insert(thing, DOMSelectors) {
         <h3 class="card-emails">${thing.price}</h3>
     </div>`);
 }
-
-insert(thing, DOMSelectors);
-
-make.forEach((thing)=>{
-    insert(thing, DOMSelectors);
+DOMSelectors.container.addEventListener("load", function (event) {
+    event.preventDefault()
+    create()
+});*/
+data.forEach((game)=>{
+    const newObject = document.createElement("div");
+    newObject.container.insertAdjacentHTML("afterbegin",
+        ` <div class="card">
+        <h2 class="card-title">${thing.names}</h2>
+        <img src="${thing.pictures}" alt="picture" class="card-img">
+        <h3 class="card-emails">${thing.price}</h3>
+        </div>`)
+    
 });
