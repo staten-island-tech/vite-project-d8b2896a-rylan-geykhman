@@ -16,7 +16,7 @@ body {
   --primary: var(--gray);
 }
 
-.container {
+#container {
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
