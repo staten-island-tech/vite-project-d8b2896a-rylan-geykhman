@@ -3,8 +3,15 @@ import { data } from "./games";
 
 const DOMSelectors = {
     container: document.querySelector(".container"),
-    cardlist:document.querySelector(".cardlist")
+    cardlist: document.querySelector(".cardlist"),
+    body: document.querySelector(".body"),
+    button: document.querySelector("#button")
 };
+
+DOMSelectors.button.addEventListener("click", function (event) {
+    event.preventDefault()
+    freeGame()
+});
 
 data.forEach((game)=>{
     const newObject = document.createElement("div");
@@ -18,12 +25,4 @@ data.forEach((game)=>{
     DOMSelectors.cardlist.appendChild(newObject)
 });
 
-function freeGame(){
-    data.filter((game)=> game.price.value == "true");
-    DOMSelectors.cardlist.appendChild(newObject)
-}
 
-DOMSelectors.cardlist.addEventListener("click", function (event) {
-    event.preventDefault()
-    freeGame()
-});
