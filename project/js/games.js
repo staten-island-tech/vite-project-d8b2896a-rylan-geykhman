@@ -1,7 +1,7 @@
 const data = [
     {
         name: "Counter-Strike 2",
-        genres: ["First-Person Shooter"],
+        genres: ["Shooter"],
         price: "Free",
         multiplayer: true,
         dlc: false,
