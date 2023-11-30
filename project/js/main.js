@@ -7,7 +7,9 @@ const DOMSelectors = {
     body: document.querySelector(".body"),
     shooterButton: document.querySelector("#shooterButton"),
     freeButton: document.querySelector("#freeButton"),
-    resetButton: document.querySelector("#resetButton")
+    resetButton: document.querySelector("#resetButton"),
+    darkMode: document.querySelector("#darkMode"),
+    lightMode: document.querySelector("#lightMode")
 };
 
 DOMSelectors.shooterButton.addEventListener("click", function (event) {
@@ -24,6 +26,18 @@ DOMSelectors.resetButton.addEventListener("click", function (event) {
     event.preventDefault()
     createCards(data);
 });
+
+DOMSelectors.darkMode.addEventListener("click", function (event) {
+    event.preventDefault()
+    DOMSelectors.body.classList.add("dark")
+    DOMSelectors.body.classList.remove("light")
+})
+
+DOMSelectors.lightMode.addEventListener("click", function (event) {
+    event.preventDefault()
+    DOMSelectors.body.classList.add("light")
+    DOMSelectors.body.classList.remove("dark")
+})
 
 function createCards(arr){
     DOMSelectors.cardlist.innerHTML = "";
@@ -47,6 +61,6 @@ function shooterGame(){
 }
 
 function freeGame(){
-    const FreeGames = data.filter((price)=> price.value = "Free")
+    const FreeGames = data.filter((game)=> game.price == "Free")
     createCards(FreeGames)
 }

@@ -5,7 +5,9 @@
 :root {
   --gray: #3a3a3a;
   --blind: #ffffff;
+  --rage: #800707;
   --primary: var(--gray);
+  --button: var(--blind);
 }
 
 body {
@@ -20,13 +22,18 @@ body {
   --primary: var(--gray);
 }
 
+.rage {
+  --primary: var(--rage);
+
+}
+
 #container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(150, 153, 157);
+  background-color: var(--primary);
 }
 
 .card {
@@ -57,8 +64,12 @@ body {
   opacity: 0.5;
 }
 
-#button {
-  height: 100px;
+button {
+  height: 50px;
   width: 100px;
-  background-color: red;
+  background-color: var(--button);
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }

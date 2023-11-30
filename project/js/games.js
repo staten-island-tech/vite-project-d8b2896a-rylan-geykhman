@@ -7,13 +7,6 @@ const data = [
         dlc: false,
     },
     {
-        name: "Cuphead",
-        genres: ["Platformer", "Shooter"],
-        multiplayer: true,
-        price: "$19.99",
-        dlc: true,
-    },
-    {
         name: "Fortnite",
         genres: ["Battle Royale", "Shooter"],
         multiplayer: true,
@@ -39,6 +32,13 @@ const data = [
         genres: ["Open-World", "Adventure"],
         multiplayer: true,
         price: "$29.99",
+        dlc: true,
+    },
+    {
+        name: "Cuphead",
+        genres: ["Platformer", "Shooter"],
+        multiplayer: true,
+        price: "$19.99",
         dlc: true,
     },
     {
