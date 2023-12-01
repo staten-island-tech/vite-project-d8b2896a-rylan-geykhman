@@ -8,6 +8,8 @@ const DOMSelectors = {
     shooterButton: document.querySelector("#shooterButton"),
     freeButton: document.querySelector("#freeButton"),
     resetButton: document.querySelector("#resetButton"),
+    multiplayerButton: document.querySelector("#multiplayerButton"),
+    noApproval: document.querySelector("#whalenButton"),
     darkMode: document.querySelector("#darkMode"),
     lightMode: document.querySelector("#lightMode")
 };
@@ -21,6 +23,16 @@ DOMSelectors.freeButton.addEventListener("click", function (event) {
     event.preventDefault()
     freeGame()
 });
+
+DOMSelectors.multiplayerButton.addEventListener("click", function (event) {
+    event.preventDefault()
+    multiplayerGame()
+});
+
+DOMSelectors.noApproval.addEventListener("click", function (event){
+    event.preventDefault()
+    WhalenNotApproved()
+})
 
 DOMSelectors.resetButton.addEventListener("click", function (event) {
     event.preventDefault()
@@ -63,4 +75,14 @@ function shooterGame(){
 function freeGame(){
     const FreeGames = data.filter((game)=> game.price == "Free")
     createCards(FreeGames)
+}
+
+function multiplayerGame(){
+    const MultiplayerGames = data.filter((mp)=> mp.multiplayer === true)
+    createCards(MultiplayerGames)
+}
+
+function WhalenNotApproved(){
+    const WhalenGames = data.filter((game)=> game.MrWhalenApproval === false)
+    createCards(WhalenGames)
 }
