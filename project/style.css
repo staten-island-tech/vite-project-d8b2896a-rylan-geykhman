@@ -4,10 +4,13 @@
 
 :root {
   --gray: #3a3a3a;
-  --blind: #ffffff;
-  --rage: #800707;
+  --white: #ffffff;
+  --red: #800707;
+  --mint: #86c98f;
+  --navy: #2b3483;
   --primary: var(--gray);
-  --button: var(--blind);
+  --button: var(--white);
+  --card: var(--gray);
 }
 
 body {
@@ -15,16 +18,13 @@ body {
 }
 
 .light {
-  --primary: var(--blind);
+  --primary: var(--white);
+  --card: var(--mint);
 }
 
 .dark {
   --primary: var(--gray);
-}
-
-.rage {
-  --primary: var(--rage);
-
+  --card: var(--navy);
 }
 
 #container {
@@ -41,12 +41,12 @@ body {
   width: 20%;
   margin: 5%;
   display: flex;
-  background-color: rgb(131, 12, 101);
+  background-color: var(--card);
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  transition: 0.3s ease-in-out;
-  box-shadow: 10px 5px 10px rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 10px;
 }
 
 .card-title {
@@ -60,18 +60,8 @@ body {
   text-align: center;
 }
 
-#hover1:hover {
-  opacity: 0.5;
-}
-
 button {
-  height: 50px;
-  width: 100px;
   background-color: var(--button);
-  display: inline-block;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .card-img {

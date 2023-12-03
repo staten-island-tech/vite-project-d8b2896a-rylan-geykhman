@@ -1,18 +1,6 @@
 import '../style.css';
 import { data } from "./games";
-
-const DOMSelectors = {
-    container: document.querySelector("#container"),
-    cardlist: document.querySelector(".cardlist"),
-    body: document.querySelector(".body"),
-    shooterButton: document.querySelector("#shooterButton"),
-    freeButton: document.querySelector("#freeButton"),
-    resetButton: document.querySelector("#resetButton"),
-    multiplayerButton: document.querySelector("#multiplayerButton"),
-    noApproval: document.querySelector("#whalenButton"),
-    darkMode: document.querySelector("#darkMode"),
-    lightMode: document.querySelector("#lightMode")
-};
+import { DOMSelectors } from "./dom";
 
 DOMSelectors.shooterButton.addEventListener("click", function (event) {
     event.preventDefault()
@@ -86,3 +74,15 @@ function WhalenNotApproved(){
     const WhalenGames = data.filter((game)=> game.MrWhalenApproval === false)
     createCards(WhalenGames)
 }
+
+/* function filters(){
+    let buttons = document.querySelectorAll(".button")
+    buttons.forEach((btn)=> btn.addEventListener("click", function(){
+        let category = btn.textContent.toLowerCase()
+        let newArr = items.filter((game)=> game.type.includes(category))
+        DOMSelectors.cardlist.innerHTML = "";
+        createCards(newArr)
+    }))
+}
+
+filters() */
