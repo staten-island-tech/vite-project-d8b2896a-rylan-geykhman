@@ -8,9 +8,7 @@ const DOMSelectors = {
     multiplayerButton: document.querySelector("#multiplayerButton"),
     noApproval: document.querySelector("#whalenButton"),
     DLCButton: document.querySelector("#DLCButton"),
-    darkMode: document.querySelector("#darkMode"),
-    lightMode: document.querySelector("#lightMode"),
-    animeMode: document.querySelector("#waifuMode"),
+    modeSwitch: document.querySelector("#modeSwitch"),
 };
 
 export { DOMSelectors };

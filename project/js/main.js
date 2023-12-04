@@ -32,17 +32,16 @@ DOMSelectors.resetButton.addEventListener("click", function (event) {
     createCards(data);
 });
 
-DOMSelectors.darkMode.addEventListener("click", function (event) {
+DOMSelectors.modeSwitch.addEventListener("click", function (event) {
     event.preventDefault()
-    DOMSelectors.body.classList.add("dark")
-    DOMSelectors.body.classList.remove("light")
-})
-
-DOMSelectors.lightMode.addEventListener("click", function (event) {
-    event.preventDefault()
-    DOMSelectors.body.classList.add("light")
-    DOMSelectors.body.classList.remove("dark")
-})
+    if (DOMSelectors.body.classList.contains("light")) {
+        DOMSelectors.body.classList.remove("light")
+        DOMSelectors.body.classList.add("dark")
+    } else {
+        DOMSelectors.body.classList.remove("dark")
+        DOMSelectors.body.classList.add("light")
+    }
+});
 
 function createCards(arr){
     DOMSelectors.cardlist.innerHTML = "";
