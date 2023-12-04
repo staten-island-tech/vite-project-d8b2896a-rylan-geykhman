@@ -79,7 +79,7 @@ function WhalenNotApproved(){
     let buttons = document.querySelectorAll(".button")
     buttons.forEach((btn)=> btn.addEventListener("click", function(){
         let category = btn.textContent.toLowerCase()
-        let newArr = items.filter((game)=> game.type.includes(category))
+        let newArr = data.filter((game)=> game.type.includes(category))
         DOMSelectors.cardlist.innerHTML = "";
         createCards(newArr)
     }))
