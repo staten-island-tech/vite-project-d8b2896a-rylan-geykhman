@@ -10,7 +10,7 @@
   --navy: #2b3483;
   --primary: var(--gray);
   --button: var(--white);
-  --card: var(--gray);
+  --card: var(--navy);
 }
 
 body {
@@ -60,11 +60,32 @@ body {
   text-align: center;
 }
 
-button {
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.button {
   background-color: var(--button);
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 10px;
 }
 
 .card-img {
   max-height: 60%;
   max-width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+#waifuMode {
+  font-size: 0.05rem;
+  height: 0.25px;
+  width: 0.25px;
 }

@@ -22,6 +22,11 @@ DOMSelectors.noApproval.addEventListener("click", function (event){
     WhalenNotApproved()
 })
 
+DOMSelectors.DLCButton.addEventListener("click", function (event) {
+    event.preventDefault()
+    RachelLovesDLC()
+});
+
 DOMSelectors.resetButton.addEventListener("click", function (event) {
     event.preventDefault()
     createCards(data);
@@ -73,6 +78,11 @@ function multiplayerGame(){
 function WhalenNotApproved(){
     const WhalenGames = data.filter((game)=> game.MrWhalenApproval === false)
     createCards(WhalenGames)
+}
+
+function RachelLovesDLC(){
+    const DLCGames = data.filter((game)=> game.dlc === true)
+    createCards(DLCGames)
 }
 
 /* function filters(){
