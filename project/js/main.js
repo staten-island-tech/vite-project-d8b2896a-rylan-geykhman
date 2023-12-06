@@ -2,7 +2,7 @@ import '../style.css';
 import { data } from "./games";
 import { DOMSelectors } from "./dom";
 
-DOMSelectors.shooterButton.addEventListener("click", function (event) {
+/* DOMSelectors.shooterButton.addEventListener("click", function (event) {
     event.preventDefault()
     shooterGame()
 });
@@ -30,7 +30,7 @@ DOMSelectors.DLCButton.addEventListener("click", function (event) {
 DOMSelectors.resetButton.addEventListener("click", function (event) {
     event.preventDefault()
     createCards(data);
-});
+}); */
 
 DOMSelectors.modeSwitch.addEventListener("click", function (event) {
     event.preventDefault()
@@ -43,7 +43,7 @@ DOMSelectors.modeSwitch.addEventListener("click", function (event) {
     }
 });
 
-function createCards(arr){
+/* function createCards(arr){
     DOMSelectors.cardlist.innerHTML = "";
     arr.forEach((game)=>{
         const newObject = document.createElement("div");
@@ -57,9 +57,33 @@ function createCards(arr){
         DOMSelectors.cardlist.appendChild(newObject)
 })};
 
-createCards(data);
+createCards(data); */ 
 
-function shooterGame(){
+function filters(){
+    let buttons = document.querySelectorAll(".button")
+    buttons.forEach((btn)=> btn.addEventListener("click", function(){
+        let category = btn.textContent
+        let newArr = data.filter((game)=> game.genres.includes(category))
+        createCards(newArr)
+    }))
+}
+
+function createCards(arr){
+    DOMSelectors.container.innerHTML = "";
+    arr.forEach((game)=> DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div class="card">
+        <h2 class="card-title">${game.name}</h2>
+        <img src="${game.picture}" alt="picture" class="card-img">
+        <h3 class="card-price">${game.price}</h3>
+        </div>`
+    ))
+    filters()
+}
+
+createCards(data)
+
+/*  function shooterGame(){
     const ShooterGames = data.filter((type)=> type.genres.includes("Shooter"))
     createCards(ShooterGames)
 }
@@ -82,16 +106,4 @@ function WhalenNotApproved(){
 function RachelLovesDLC(){
     const DLCGames = data.filter((game)=> game.dlc === true)
     createCards(DLCGames)
-}
-
-/* function filters(){
-    let buttons = document.querySelectorAll(".button")
-    buttons.forEach((btn)=> btn.addEventListener("click", function(){
-        let category = btn.textContent.toLowerCase()
-        let newArr = data.filter((game)=> game.type.includes(category))
-        DOMSelectors.cardlist.innerHTML = "";
-        createCards(newArr)
-    }))
-}
-
-filters() */
+}  */
