@@ -1,7 +1,7 @@
 const data = [
     {
         name: "Counter-Strike 2",
-        types: ["Shooter", "Free", "Multiplayer", "Approved By Whalen"],
+        types: ["All Games", "Shooter", "Free", "Multiplayer", "Approved By Whalen"],
         price: "Free",
         picture: "https://steamcdn-a.akamaihd.net/steam/apps/730/capsule_616x353.jpg",
         multiplayer: true,
@@ -10,7 +10,7 @@ const data = [
     },
     {
         name: "Fortnite",
-        types: ["Battle Royale", "Shooter", "Multiplayer", "Free", "Approved By Whalen"],
+        types: ["All Games", "Battle Royale", "Shooter", "Multiplayer", "Free", "Approved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP.88XiV74jWk0bNFfAlwMovQHaEK?w=312&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: true,
         price: "Free",
@@ -19,7 +19,7 @@ const data = [
     },
     {
         name: "One Piece: Odyssey",
-        types: ["Open-World", "RPG", "Anime", "DLC", "Unapproved By Whalen"],
+        types: ["All Games", "Open-World", "RPG", "Anime", "DLC", "Unapproved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP.l0dQ_J-83PBWJSGUJgGcFAHaEL?w=292&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: false,
         price: "$59.99",
@@ -28,7 +28,7 @@ const data = [
     },
     {
         name: "Genshin Impact", 
-        types: ["Open-World", "RPG", "Gacha", "Free", "Unapproved By Whalen"],
+        types: ["All Games", "Open-World", "RPG", "Gacha", "Free", "Unapproved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP.6UyAX3A4Rtf-Y4S_jvUYVgHaEK?w=303&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: true,
         price: "Free (Social Status)",
@@ -37,7 +37,7 @@ const data = [
     },
     {
         name: "Minecraft",
-        types: ["Open-World", "Adventure", "Multiplayer", "DLC", "Approved By Whalen"],
+        types: ["All Games", "Open-World", "Adventure", "Multiplayer", "DLC", "Approved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP.81usBOaz0sLSdWXI2b6XTAHaEK?w=249&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: true,
         price: "$29.99",
@@ -46,7 +46,7 @@ const data = [
     },
     {
         name: "Cuphead",
-        types: ["Platformer", "Shooter", "Multiplayer", "DLC", "Approved By Whalen"],
+        types: ["All Games", "Platformer", "Shooter", "Multiplayer", "DLC", "Approved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP.Gnzb6RfpoDPjwleU44OaLgHaEK?w=302&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: true,
         price: "$19.99",
@@ -55,7 +55,7 @@ const data = [
     },
     {
         name: "Raft",
-        types: ["Open-World", "Adventure", "Multiplayer", "DLC", "Approved By Whalen"],
+        types: ["All Games","Open-World", "Adventure", "Multiplayer", "DLC", "Approved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP.muY-qbKVWuAHYkBCSeH-EQFNC7?w=302&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: true,
         price: "$59.99",
@@ -64,7 +64,7 @@ const data = [
     },
     {
         name: "Sea of Thieves",
-        types: ["Open-World", "Adventure", "Action", "Multiplayer", "DLC", "Approved By Whalen"],
+        types: ["All Games", "Open-World", "Adventure", "Action", "Multiplayer", "DLC", "Approved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP.Am8XR4OwSH_TZZbTd8yaawHaEG?w=296&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: true,
         price: "$59.99",
@@ -73,7 +73,7 @@ const data = [
     },
     {
         name: "League of Legends",
-        types: ["MOBA", "Versus", "Multiplayer", "DLC", "Unapproved By Whalen"],
+        types: ["All Games", "MOBA", "Versus", "Multiplayer", "DLC", "Unapproved By Whalen"],
         picture: "https://th.bing.com/th/id/OIP._I4jbvQ3-EPxo7S-Wts2JAHaEK?w=277&h=180&c=7&r=0&o=5&pid=1.7",
         multiplayer: true,
         price: "Free (Sanity + Unsanitary Living Conditions)",

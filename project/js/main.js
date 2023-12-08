@@ -25,12 +25,7 @@ DOMSelectors.noApproval.addEventListener("click", function (event){
 DOMSelectors.DLCButton.addEventListener("click", function (event) {
     event.preventDefault()
     RachelLovesDLC()
-});
-
-DOMSelectors.resetButton.addEventListener("click", function (event) {
-    event.preventDefault()
-    createCards(data);
-}); */
+});*/
 
 DOMSelectors.modeSwitch.addEventListener("click", function (event) {
     event.preventDefault()
@@ -63,7 +58,7 @@ function filters(){
     let buttons = document.querySelectorAll(".button")
     buttons.forEach((btn)=> btn.addEventListener("click", function(){
         let category = btn.textContent
-        let newArr = data.filter((game)=> game.genres.includes(category))
+        let newArr = data.filter((game)=> game.types.includes(category))
         createCards(newArr)
     }))
 }
